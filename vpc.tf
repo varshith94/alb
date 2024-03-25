@@ -125,7 +125,7 @@ resource "aws_lb_target_group" "albtg" {
     unhealthy_threshold = 3
     }
     tags = {
-        Name = "${var.vpc_name}-alb"
+        Name = "${var.vpc_name}-linux"
     }
   
 }
