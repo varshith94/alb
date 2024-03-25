@@ -66,7 +66,7 @@ resource "aws_security_group" "sg" {
 }
 
 resource "aws_instance" "albserver" {
-    count =1
+    count =2
     ami = var.ami
     key_name = var.key_name
     instance_type = var.instance_type
