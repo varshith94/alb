@@ -6,7 +6,7 @@ resource "aws_vpc" "dev" {
   }
 }
 
-resource "aws_internet_gateway" "igwsS" {
+resource "aws_internet_gateway" "igw" {
     vpc_id = aws_vpc.dev.id
     tags = {
         Name = "${var.vpc_name}-igw"
@@ -34,7 +34,7 @@ resource "aws_route_table" "rt" {
     }
   tags = {
     Name = "${var.vpc_name}-rt"
-  }
+}
 }
 
 resource "aws_route_table_association" "subnets" {
@@ -66,7 +66,7 @@ resource "aws_security_group" "sg" {
 }
 
 resource "aws_instance" "albserver" {
-    count =2
+    count =1
     ami = var.ami
     key_name = var.key_name
     instance_type = var.instance_type
