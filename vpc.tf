@@ -105,7 +105,7 @@ echo "<div><h1>DEV-OPS2024</h1></div>" >> /usr/share/nginx/html/index.html
 EOF
     
     tags = {
-        Name = "${var.vpc_name}-server"
+        Name = "${var.vpc_name}-amazonSserver"
     }
 }
 
